@@ -1,0 +1,19 @@
+{
+  "name": "k-id-examen",
+  "version": "1.0.0",
+  "description": "code voor het examen van K-id",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "author": "Fabian Hendriks",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.10",
+    "tailwindcss": "^2.1.1",
+    "vite": "^2.1.5"
+  }
+}
