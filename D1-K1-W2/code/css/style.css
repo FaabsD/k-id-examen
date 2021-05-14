@@ -5,25 +5,28 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply overflow-x-hidden;
+  }
   body {
     @apply m-0 overflow-x-hidden;
   }
 }
 
 @layer components {
-    .navmenu {
-        @apply relative w-screen h-screen inset-0 flex flex-col items-center justify-start bg-oceanGreen transform -translate-x-full;
-    }
-    .navmenu--open {
-        @apply transform translate-x-0;
-    }
-    .navmenu--open ~ .wrapper {
-        @apply left-full
-    }
-    .navmenu__item {
-        @apply w-4/5
-    }
-    .wrapper {
-        @apply absolute top-0
-    }
+  .navmenu {
+    @apply relative w-screen lg:w-1/4 h-screen inset-0 flex flex-col items-center justify-start bg-oceanGreen transform -translate-x-full transition-transform duration-500 ease-in-out;
+  }
+  .navmenu--open {
+    @apply transform translate-x-0;
+  }
+  .navmenu--open ~ .wrapper {
+    @apply transform translate-x-full lg:translate-x-1/4;
+  }
+  .navmenu__item {
+    @apply w-4/5;
+  }
+  .wrapper {
+    @apply absolute top-0 transition-transform duration-500 ease-in-out;
+  }
 }
