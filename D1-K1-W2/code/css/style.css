@@ -12,15 +12,18 @@
 
 @layer components {
     .navmenu {
-        @apply absolute inset-0 flex flex-col items-center justify-between bg-oceanGreen;
+        @apply relative w-screen h-screen inset-0 flex flex-col items-center justify-start bg-oceanGreen transform -translate-x-full;
+    }
+    .navmenu--open {
+        @apply transform translate-x-0;
+    }
+    .navmenu--open ~ .wrapper {
+        @apply left-full
     }
     .navmenu__item {
         @apply w-4/5
     }
-    .navmenu__item > a {
-        @apply py-2 border-b-2 border-salmon-darker w-full text-center inline-block font-semibold text-ocean-dark;
-    }
-    .navmenu ~ .wrapper {
-        @apply absolute left-full;
+    .wrapper {
+        @apply absolute top-0
     }
 }

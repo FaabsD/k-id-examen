@@ -11,29 +11,75 @@
       href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
       rel="stylesheet"
     />
-    <script src="scripts/app.js"></script>
     <title>Document</title>
   </head>
   <body class="font-open m-0 min-h-full">
     <ul class="navmenu">
       <li class="self-start mt-0">
-        <span> sluit </span>
+        <span id="menuCloseBtn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8 stroke-current text-salmon-dark"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </span>
       </li>
-      <li class="navmenu__item">
-        <ul>
-          <li class="">
-            <a href="">Home</a>
+      <li class="navmenu__item absolute inset-y-1/4">
+        <ul class="space-y-12">
+          <li class="w-full">
+            <a
+              class="
+                py-2
+                border-b-2 border-salmon-darker
+                w-full
+                text-center
+                inline-block
+                font-semibold
+                text-ocean-dark
+              "
+              >Home</a
+            >
           </li>
-          <li class="">
-            <a href="">Hoe werkt het?</a>
+          <li class="w-full">
+            <a
+              class="
+                py-2
+                border-b-2 border-salmon-darker
+                w-full
+                text-center
+                inline-block
+                font-semibold
+                text-ocean-dark
+              "
+              >Hoe werkt het?</a
+            >
           </li>
-          <li class="">
-            <a href="">Boxen</a>
+          <li class="w-full">
+            <a
+              class="
+                py-2
+                border-b-2 border-salmon-darker
+                w-full
+                text-center
+                inline-block
+                font-semibold
+                text-ocean-dark
+              "
+              >Boxen</a
+            >
           </li>
         </ul>
       </li>
     </ul>
-    <div class="wrapper">
+    <div class="wrapper w-screen min-h-screen">
       <!-- navigatiebalk -->
       <div class="flex flex-row justify-between p-4 bg-ocean-dark items-center">
         <span class="menu-switcher">
@@ -135,5 +181,6 @@
         </a>
       </div>
     </div>
+    <script src="scripts/app.js"></script>
   </body>
 </html>
