@@ -1,4 +1,5 @@
-console.log('hallo');
+// import Vue from "vue";
+
 
 
 if (document.querySelector('#menuCloseBtn')) {
