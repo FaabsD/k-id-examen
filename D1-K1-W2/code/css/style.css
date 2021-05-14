@@ -1,7 +1,26 @@
 @tailwind base;
-    body {
-    margin: 0;
-    }
+
 @tailwind components;
 
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 overflow-x-hidden;
+  }
+}
+
+@layer components {
+    .navmenu {
+        @apply absolute inset-0 flex flex-col items-center justify-between bg-oceanGreen;
+    }
+    .navmenu__item {
+        @apply w-4/5
+    }
+    .navmenu__item > a {
+        @apply py-2 border-b-2 border-salmon-darker w-full text-center inline-block font-semibold text-ocean-dark;
+    }
+    .navmenu ~ .wrapper {
+        @apply absolute left-full;
+    }
+}
