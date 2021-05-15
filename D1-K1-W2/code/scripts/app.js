@@ -23,7 +23,9 @@ if (document.getElementById('products')) {
     let productsApp = new Vue({
         el: '#products',
         data: {
-            fishProducts: []
+            fishProducts: [],
+
+            userSelection: []
         },
 
         methods: {
@@ -31,9 +33,32 @@ if (document.getElementById('products')) {
                 fetch('../products.json')
                     .then(response => response.json())
                     .then(data => (this.fishProducts = data));
+            },
+
+            addToSelection: function (event) {
+                if (event.target.value === "aantal") {
+
+                } else {
+                    let selectionToAdd = {
+                        fishKind: event.target.dataset.fishkind,
+                        image: event.target.dataset.fishimage,
+                        count: event.target.value,
+                    };
+
+                    this.userSelection.push(selectionToAdd);
+                }
+
+            },
+
+            addToShoppingCart: function(e) {
+                e.preventDefault();
+                localStorage.setItem('userSelection', this.userSelection);
+                window.location = e.target.href;
+                console.log(localStorage.getItem('userSelection'));
             }
         },
         mounted() {
+            localStorage.clear();
             this.getProductData()
         }
     })
