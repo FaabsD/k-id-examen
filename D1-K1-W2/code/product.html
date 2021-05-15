@@ -183,21 +183,33 @@
         </a>
       </div>
       <!-- Einde navigatiebalk -->
-      <img src="images/fish/product header.jpg" alt="" class="w-full" />
+      <img src="/images/fish/product header.jpg" alt="" class="w-full" />
       <div id="products" class="grid grid-flow-row auto-rows-auto gap-6">
-        <h2 class="font-comfortaa font-bold text-ocean-dark text-base text-center">
+        <h2
+          class="font-comfortaa font-bold text-ocean-dark text-base text-center"
+        >
           Kies je soorten je kan er maximaal 6 kiezen
         </h2>
 
         <div
           v-for="product in fishProducts"
-          class="flex flex-row items-center bg-ocean-light rounded-xl py-4 w-4/5 mx-auto"
+          class="
+            flex flex-row
+            items-center
+            bg-ocean-light
+            rounded-xl
+            py-4
+            w-4/5
+            mx-auto
+          "
         >
           <img v-bind:src="product.image" alt="" class="h-24" />
-          <p class="font-comfortaa font-bold text-lg text-ocean-dark">{{product.fishKind}}</p>
+          <p class="font-comfortaa font-bold text-lg text-ocean-dark">
+            {{product.fishKind}}
+          </p>
         </div>
       </div>
     </div>
-    <script src="scripts/app.js" type="module"></script>
+    <script src="/scripts/app.js" type="module"></script>
   </body>
 </html>
