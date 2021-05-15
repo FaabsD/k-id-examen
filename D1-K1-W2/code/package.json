@@ -9,7 +9,9 @@
   },
   "author": "Fabian Hendriks",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "@tailwindcss/forms": "^0.3.2"
+  },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
     "postcss": "^8.2.15",
