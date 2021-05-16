@@ -52,7 +52,7 @@ if (document.getElementById('products')) {
 
             addToShoppingCart: function(e) {
                 e.preventDefault();
-                localStorage.setItem('userSelection', this.userSelection);
+                localStorage.setItem('userSelection', JSON.stringify(this.userSelection));
                 window.location = e.target.href;
                 console.log(localStorage.getItem('userSelection'));
             }
@@ -61,5 +61,26 @@ if (document.getElementById('products')) {
             localStorage.clear();
             this.getProductData()
         }
+    })
+}
+
+if(document.querySelector('#shoppingCart')) {
+    let shoppingCart = new Vue({
+        el: '#shoppingCart',
+        data: {
+            userSelected: []
+        },
+
+        methods: {
+            getUserSelection: function() {
+                let userSelection = JSON.parse(localStorage.getItem('userSelection'));
+                this.userSelected = userSelection;
+            }
+        },
+
+        mounted() {
+            this.getUserSelection();
+        }
+
     })
 }
