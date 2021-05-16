@@ -30,7 +30,7 @@ if (document.getElementById('products')) {
 
         methods: {
             getProductData: function () {
-                fetch('../products.json')
+                fetch('products.json')
                     .then(response => response.json())
                     .then(data => (this.fishProducts = data));
             },
