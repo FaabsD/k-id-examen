@@ -185,8 +185,8 @@
       <!-- Einde navigatiebalk -->
 
       <!-- toon de gebruiker zijn/haar keuze in de "winkelwagen" -->
-      <div id="shoppingCart" class="flex flex-col bg-salmon-lighter p-10 rounded-3xl min-w-min max-w-max mx-auto mt-8">
-        <table class="w-full font-comfortaa">
+      <div id="shoppingCart" class="flex flex-col lg:flex-row lg:justify-between lg:w-2/4 lg:gap-8 bg-salmon-lighter p-10 rounded-3xl min-w-min mx-auto mt-8">
+        <table class="w-full lg:w-2/4 font-comfortaa">
           <thead class="bg-oceanGreen border-2 border-black text-white">
             <th scope="col" class="p-2">
               Visbox
@@ -211,7 +211,7 @@
           </tbody>
         </table>
 
-        <div>
+        <div class="lg:w-2/4">
           <p class="border-b-2 border-salmon-darker py-4 text-ocean-dark text-base font-comfortaa">
             Subtotaal: €<span id="subTotal">35,00</span>
           </p>
@@ -221,13 +221,13 @@
           <p class="border-b-2 border-salmon-darker py-4 text-ocean-dark text-base font-comfortaa">
             Totaal (inclusief btw) €<span id="total"></span>
           </p>
-          <a href="order.html" class="px-6 py-3 bg-salmon-darker mx-auto mt-2 block max-w-max rounded-xl font-comfortaa text-base text-white">Afrekenen</a>
+          <a href="order.html" class="px-6 py-3 bg-salmon-darker mx-auto mt-8 block max-w-max rounded-xl font-comfortaa text-base text-white">Afrekenen</a>
         </div>
       </div>
 
       
       <!-- toon de footer -->
-      <footer class="bg-ocean text-black text-center p-4 mt-8 lg:mt-20">
+      <footer class="bg-ocean text-black text-center p-4 mt-8 lg:mt-20 lg:absolute lg:bottom-0 lg:px-4 lg:py2 lg:w-full">
         <p>
           Op werkdagen bereikbaar tussen 08:00 en 20:00 uur via mail, chat en
           telefoon. 085 018 7591 klantenservice@captain-fish.nl
