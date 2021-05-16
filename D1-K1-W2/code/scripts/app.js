@@ -75,11 +75,32 @@ if(document.querySelector('#shoppingCart')) {
             getUserSelection: function() {
                 let userSelection = JSON.parse(localStorage.getItem('userSelection'));
                 this.userSelected = userSelection;
+            },
+
+            calculatePriceTotal: function() {
+                const subTotal = document.querySelector('#subTotal').innerHTML;
+                const shipping = document.querySelector('#shipping').innerHTML;
+                const tax = 21;
+                const priceTotal = document.querySelector('#total');
+
+                let formattedSubtotal = subTotal.replace(/\,/g, '.');
+                let formattedShipping = shipping.replace(/\,/g, '.');
+
+                formattedSubtotal = Number(formattedSubtotal);
+                formattedShipping = Number(formattedShipping);
+
+                let sum1 = formattedSubtotal + formattedShipping;
+                let sum2 = sum1 / 100 * tax;
+                let sum3 = sum1 + sum2;
+                let roundedSum = sum3.toFixed(2);
+                
+                priceTotal.innerHTML = roundedSum;
             }
         },
 
         mounted() {
             this.getUserSelection();
+            this.calculatePriceTotal()
         }
 
     })
