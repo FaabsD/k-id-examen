@@ -44,7 +44,7 @@ module.exports = {
 
       maxWidth: {
         'screen': '100vw'
-      }
+      },
     },
   },
   variants: {
