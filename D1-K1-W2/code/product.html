@@ -185,82 +185,164 @@
       <!-- Einde navigatiebalk -->
 
       <!-- de beschrijving en afbeelding -->
-      <img src="/images/fish/product header.jpg" alt="" class="w-full" />
-      <div id="products" class="grid grid-flow-row auto-rows-auto gap-6 mt-4">
-        <h1 class=" text-2xl text-salmon-lighter text-center font-comfortaa font-bold">box beschrijving</h1>
-        <p class="text-center text-sm">
-          <span class="font-bold">Gratis thuisbezorgd</span> <br>
-          binnen 2 werkdagen <br>
-          <span class="font-bold">Vriesvers</span> <br>
-          Dagelijks aanvoer, direct gevroren <br>
-          <span class="font-bold">Keuze uit 16 soorten vis</span> <br>
-          Stel je eigen visbox samen <br>
-          <span class="font-bold">
-            klik op het aantal vakje om jouw selectie te <br>
-            maken en aantal te kiezen.
-            *Let op meerdere aantallen <br>
-            telt als meerdere producten*
-          </span>
-        </p>
-        <h2
-          class="font-comfortaa font-bold text-ocean-dark text-base text-center"
-        >
-          Kies je soorten je kan er maximaal 6 kiezen
-        </h2>
+      <img
+        src="/images/fish/product header.jpg"
+        alt=""
+        class="w-full lg:h-96 lg:object-cover"
+      />
+      <div
+        id="products"
+        class="grid grid-flow-row auto-rows-auto lg:grid-cols-4 gap-6 mt-4"
+      >
+        <div class="lg:col-start-1 lg:col-end-4">
+          <h1
+            class="
+              text-2xl text-salmon-lighter text-center
+              font-comfortaa font-bold
+            "
+          >
+            box beschrijving
+          </h1>
+          <p class="text-center text-sm">
+            <span class="font-bold">Gratis thuisbezorgd</span> <br />
+            binnen 2 werkdagen <br />
+            <span class="font-bold">Vriesvers</span> <br />
+            Dagelijks aanvoer, direct gevroren <br />
+            <span class="font-bold">Keuze uit 16 soorten vis</span> <br />
+            Stel je eigen visbox samen <br />
+            <span class="font-bold">
+              klik op het aantal vakje om jouw selectie te <br />
+              maken en aantal te kiezen. *Let op meerdere aantallen <br />
+              telt als meerdere producten*
+            </span>
+          </p>
+        </div>
         <!-- de vissoorten -->
         <div
-          v-for="product in fishProducts"
-          class="
-            flex flex-row
-            items-center
-            justify-between
-            bg-ocean-light
-            rounded-xl
-            py-4
-            pr-4
-            w-5/6
-            mx-auto
-            gap-1
-          "
+          class="lg:col-start-1 lg:col-end-4 lg:grid lg:grid-cols-4 lg:gap-4"
         >
-          <img v-bind:src="product.image" alt="" class="h-20" />
-          <p class="font-comfortaa font-bold text-lg text-ocean-dark">
-            {{product.fishKind}}
-          </p>
-          <select class="bg-salmon-light text-xs text-oceanGreen-dark flex-grow-0 min-w-min" :data-fishKind="product.fishKind" :data-fishImage="product.image" @change="addToSelection($event)">
-            <option value="aantal" selected>aantal</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select>
-        </div>
-        <!-- toon de selectie -->
-        <div>
-          <h2 class="text-2xl font-comfortaa font-bold text-ocean-dark text-center"> Jouw selectie</h2>
-          <div v-if="userSelection.length > 0" class="bg-salmon-lighter border border-salmon-darker rounded-xl w-4/5 mx-auto grid grid-cols-3 p-4">
-              <div v-for="selection in userSelection" class="flex flex-col justify-items-stretch">
-                <span class=" text-xs rounded-full bg-salmon-darker max-w-max font-bold text-white py-1 px-2 self-end">
-                  {{selection.count}}
-                </span>
-                <img :src="selection.image" alt="">
-
-              </div>
+          <h2
+            class="
+              font-comfortaa font-bold
+              text-ocean-dark text-base text-center
+              lg:col-span-full
+            "
+          >
+            Kies je soorten je kan er maximaal 6 kiezen
+          </h2>
+          <div
+            v-for="product in fishProducts"
+            class="
+              flex flex-row
+              items-center
+              justify-between
+              bg-ocean-light
+              rounded-xl
+              py-4
+              pr-4
+              w-5/6
+              mx-auto
+              gap-1
+              lg:w-full
+            "
+          >
+            <img v-bind:src="product.image" alt="" class="h-20" />
+            <p class="font-comfortaa font-bold text-lg text-ocean-dark">
+              {{product.fishKind}}
+            </p>
+            <select
+              class="
+                bg-salmon-light
+                text-xs text-oceanGreen-dark
+                flex-grow-0
+                min-w-min
+              "
+              :data-fishKind="product.fishKind"
+              :data-fishImage="product.image"
+              @change="addToSelection($event)"
+            >
+              <option value="aantal" selected>aantal</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
           </div>
         </div>
-        <a href="shopping-cart.html" @click="addToShoppingCart($event)" class="py-2.5 px-6 bg-salmon-darker block max-w-max text-white text-base rounded-lg mx-auto my-8">
-        Toevoegen
-        </a>
+        <!-- toon de selectie -->
+
+        <div>
+          <h2
+            class="
+              text-2xl
+              font-comfortaa font-bold
+              text-ocean-dark text-center
+            "
+          >
+            Jouw selectie
+          </h2>
+          <div
+            v-if="userSelection.length > 0"
+            class="
+              bg-salmon-lighter
+              border border-salmon-darker
+              rounded-xl
+              w-4/5
+              mx-auto
+              grid grid-cols-3
+              p-4
+              lg:w-auto
+            "
+          >
+            <div
+              v-for="selection in userSelection"
+              class="flex flex-col justify-items-stretch"
+            >
+              <span
+                class="
+                  text-xs
+                  rounded-full
+                  bg-salmon-darker
+                  max-w-max
+                  font-bold
+                  text-white
+                  py-1
+                  px-2
+                  self-end
+                "
+              >
+                {{selection.count}}
+              </span>
+              <img :src="selection.image" alt="" />
+            </div>
+          </div>
+          <a
+            href="shopping-cart.html"
+            @click="addToShoppingCart($event)"
+            class="
+              py-2.5
+              px-6
+              bg-salmon-darker
+              block
+              max-w-max
+              text-white text-base
+              rounded-lg
+              mx-auto
+              my-8
+            "
+          >
+            Toevoegen
+          </a>
+        </div>
       </div>
       <!-- toon de footer -->
-      <footer class="bg-ocean text-black text-center p-4">
-          <p>
-            Op werkdagen bereikbaar tussen 08:00 en 20:00 uur via mail, chat en telefoon.
- 085 018 7591
- klantenservice@captain-fish.nl
-          </p>
+      <footer class="bg-ocean text-black text-center p-4 lg:mt-20">
+        <p>
+          Op werkdagen bereikbaar tussen 08:00 en 20:00 uur via mail, chat en
+          telefoon. 085 018 7591 klantenservice@captain-fish.nl
+        </p>
       </footer>
     </div>
     <script src="/scripts/app.js" type="module"></script>
