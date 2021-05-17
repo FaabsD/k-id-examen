@@ -186,49 +186,50 @@
 
       <!-- toon de gebruiker zijn/haar keuze en een formulier om de gegevens in te vullen" -->
       <div class="lg:grid lg:grid-cols-4 gap-8">
-        <form action="" class="mx-auto p-8 bg-salmon-dark space-y-2 rounded-3xl mt-8 lg:w-full lg:col-start-2">
+        <form action="" class="mx-auto p-8 bg-salmon-dark space-y-2 rounded-3xl mt-8 lg:w-full lg:col-start-2" id="order">
           <p class="w-full">
             <label class="text-sm text-ocean-dark font-comfortaa font-bold">
               Naam: <br>
-            <input type="text" class="border-none rounded-lg focus:border focus:border-ocean w-full">
+            <input type="text" class="border-none rounded-lg focus:border focus:border-ocean w-full" v-model="name">
             </label>
           </p>
           <p class="w-full">
             <label class="text-sm text-ocean-dark font-comfortaa font-bold">
               Achternaam: <br>
-            <input type="text" class="border-none rounded-lg focus:border focus:border-ocean w-full">
+            <input type="text" class="border-none rounded-lg focus:border focus:border-ocean w-full" v-model="lastName">
             </label>
           </p>
           <p class="w-full">
             <label class="text-sm text-ocean-dark font-comfortaa font-bold">
               Straatnaam en huisnummer: <br>
-            <input type="text" class="border-none rounded-lg focus:border focus:border-ocean w-full">
+            <input type="text" class="border-none rounded-lg focus:border focus:border-ocean w-full" v-model="address">
             </label>
           </p>
           <p class="w-full">
             <label class="text-sm text-ocean-dark font-comfortaa font-bold">
               Postcode: <br>
-            <input type="text" class="border-none rounded-lg focus:border focus:border-ocean w-full">
+            <input type="text" class="border-none rounded-lg focus:border focus:border-ocean w-full" v-model="zipCode">
             </label>
           </p>
           <p class="w-full">
             <label class="text-sm text-ocean-dark font-comfortaa font-bold">
               Plaats: <br>
-            <input type="text" class="border-none rounded-lg focus:border focus:border-ocean w-full">
+            <input type="text" class="border-none rounded-lg focus:border focus:border-ocean w-full" v-model="city">
             </label>
           </p>
           <p class="w-full">
             <label class="text-sm text-ocean-dark font-comfortaa font-bold">
               Telefoon: <br>
-            <input type="text" class="border-none rounded-lg focus:border focus:border-ocean w-full">
+            <input type="text" class="border-none rounded-lg focus:border focus:border-ocean w-full" v-model="phone">
             </label>
           </p>
           <p class="w-full">
             <label class="text-sm text-ocean-dark font-comfortaa font-bold">
               Email: <br>
-            <input type="text" class="border-none rounded-lg focus:border focus:border-ocean w-full">
+            <input type="text" class="border-none rounded-lg focus:border focus:border-ocean w-full" v-model="mail">
             </label>
           </p>
+          <button class="py-3 px-6 block bg-salmon-lighter font-comfortaa text-salmon-darker max-w-max mx-auto rounded-xl mt-8" @click.prevent="saveUserData()" >Plaatsen</button>
         </form>
         <div class="lg:col-start-3 mt-4">
           <h2 class="text-center text-base text-ocean-dark font-semibold">Jouw samenstelling</h2>
@@ -270,7 +271,6 @@
               </p>
             </div>
           </div>
-          <a href="" class="py-3 px-6 block bg-salmon-darker font-comfortaa text-white max-w-max mx-auto rounded-xl mt-8">Plaatsen</a>
         </div>
       </div>
 
