@@ -105,3 +105,58 @@ if(document.querySelector('#shoppingCart')) {
 
     })
 }
+
+if(document.querySelector('#order')) {
+    let orderData = new Vue({
+        el: '#order',
+        data: {
+            name: '',
+            lastName: '',
+            address: '',
+            zipCode: '',
+            city: '',
+            phone: '',
+            mail: ''
+        },
+        methods: {
+           saveUserData: function() {
+               let dataToSave= JSON.stringify(this.$data);
+               
+               localStorage.setItem('userData', dataToSave);
+
+               window.location = 'confirmation.html'
+           }
+        },
+    })
+}
+
+if(document.querySelector('#confirmationScreen')) {
+    let confirmation = new Vue({
+        el: '#confirmationScreen',
+        data: {
+            orderData: [],
+            userData: null
+        },
+        methods: {
+            getOrderData: function() {
+                const order = JSON.parse(localStorage.getItem('userSelection'));
+                this.orderData = order;
+            },
+            getUserData: function() {
+                const user = JSON.parse(localStorage.getItem('userData'));
+                this.userData = user;
+            },
+            returnToHome: function() {
+                localStorage.clear();
+                window.location = "index.html";
+            }
+        },
+
+        mounted() {
+            this.getOrderData();
+            this.getUserData();
+            setTimeout(this.returnToHome, 30000);
+    
+        }
+    })
+}
