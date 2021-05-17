@@ -10,7 +10,8 @@ module.exports = {
                 info: resolve(__dirname, 'info.html'),
                 productOverview: resolve(__dirname, 'product-overview.html'),
                 product: resolve(__dirname, 'product.html'),
-                shoppingCart: resolve(__dirname, 'shopping-cart.html') 
+                shoppingCart: resolve(__dirname, 'shopping-cart.html'),
+                confirmPage: resolve(__dirname, 'confirmation.html') 
             }
         }
     }
