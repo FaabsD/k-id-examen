@@ -1,0 +1,66 @@
+[
+  {
+    "fishKind": "Vissticks",
+    "image": "images/fish/Vissticks.png"
+  },
+  {
+    "fishKind": "Dorade",
+    "image": "images/fish/Dorade.png"
+  },
+  {
+    "fishKind": "Garnalen",
+    "image": "images/fish/Garnalen.png"
+  },
+  {
+    "fishKind": "Heilbot",
+    "image": "images/fish/Heilbot.png"
+  },
+  {
+    "fishKind": "Kabeljauw",
+    "image": "images/fish/Kabeljauw.png"
+  },
+  {
+    "fishKind": "Roodbaars",
+    "image": "images/fish/Roodbaars.png"
+  },
+  {
+    "fishKind": "Schilfilet",
+    "image": "images/fish/Schilfilet.png"
+  },
+  {
+    "fishKind": "Scholfilet",
+    "image": "images/fish/Scholfilet.png"
+  },
+  {
+    "fishKind": "Sint-jakobsschelp",
+    "image": "images/fish/SintJacobsschelpen.png"
+  },
+  {
+    "fishKind": "Sliptong",
+    "image": "images/fish/Sliptong.png"
+  },
+  {
+    "fishKind": "Tong",
+    "image": "images/fish/Tong.png"
+  },
+  {
+    "fishKind": "Tonijnsteak",
+    "image": "images/fish/Tonijnsteaks.png"
+  },
+  {
+    "fishKind": "Zalm huidloos",
+    "image": "images/fish/Zalm_Huidloos.png"
+  },
+  {
+    "fishKind": "Zalm warm gerookt",
+    "image": "images/fish/Zalm_Warmgerookt.png"
+  },
+  {
+    "fishKind": "Zalm met huid",
+    "image": "images/fish/Zalm-met-Huid.png"
+  },
+  {
+    "fishKind": "Zeebaars",
+    "image": "images/fish/Zeebaars.png"
+  }
+]
